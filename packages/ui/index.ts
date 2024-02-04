@@ -13,6 +13,8 @@ import PreviewToolBar from './previewToolBar';
 import ParagraphFrontButton from './paragraphFrontButton';
 import ParagraphFrontMenu from './paragraphFrontMenu';
 
+import ZInlineFormatToolbar from './zInlineFormatToolbar';
+
 // footnoteTool linkTools tableChessboard tooltip are not finished.
 
 export {
@@ -29,4 +31,5 @@ export {
   PreviewToolBar,
   ParagraphFrontButton,
   ParagraphFrontMenu,
+  ZInlineFormatToolbar,
 };

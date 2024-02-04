@@ -3,7 +3,6 @@ import strongIcon from '@muya/assets/icons/format_strong/2.png';
 import emphasisIcon from '@muya/assets/icons/format_emphasis/2.png';
 import underlineIcon from '@muya/assets/icons/format_underline/2.png';
 import codeIcon from '@muya/assets/icons/code/2.png';
-import linkIcon from '@muya/assets/icons/format_link/2.png';
 import strikeIcon from '@muya/assets/icons/format_strike/2.png';
 import mathIcon from '@muya/assets/icons/format_math/2.png';
 import highlightIcon from '@muya/assets/icons/highlight/2.png';

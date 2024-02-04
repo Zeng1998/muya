@@ -55,12 +55,6 @@ const icons = [
     icon: mathIcon,
   },
   {
-    type: 'link',
-    tooltip: 'Link',
-    shortcut: `${COMMAND_KEY}+L`,
-    icon: linkIcon,
-  },
-  {
     type: 'clear',
     tooltip: 'Eliminate',
     shortcut: `⇧+${COMMAND_KEY}+R`,

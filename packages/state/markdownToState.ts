@@ -15,6 +15,7 @@ type MarkdownToStateOptions = {
   isGitlabCompatibilityEnabled: boolean;
   trimUnnecessaryCodeBlockEmptyLines: boolean;
   frontMatter: boolean;
+  preferLooseListItem: boolean;
 };
 
 const DEFAULT_OPTIONS = {
@@ -23,6 +24,7 @@ const DEFAULT_OPTIONS = {
   isGitlabCompatibilityEnabled: true,
   trimUnnecessaryCodeBlockEmptyLines: false,
   frontMatter: true,
+  preferLooseListItem: true,
 };
 
 class MarkdownToState {
@@ -39,6 +41,7 @@ class MarkdownToState {
       isGitlabCompatibilityEnabled = true,
       trimUnnecessaryCodeBlockEmptyLines = false,
       frontMatter = true,
+      preferLooseListItem = true,
     } = this._options;
 
     const tokens = lexBlock(markdown, {
@@ -262,10 +265,11 @@ class MarkdownToState {
 
         case 'list': {
           const { listType, loose, start } = token;
+          
           const bulletMarkerOrDelimiter =
             token.items[0].bulletMarkerOrDelimiter;
           const meta: any = {
-            loose,
+            loose: preferLooseListItem,
           };
           if (listType === 'order') {
             meta.start = /^\d+$/.test(start) ? start : 1;

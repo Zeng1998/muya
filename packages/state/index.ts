@@ -61,6 +61,7 @@ class JSONState {
       trimUnnecessaryCodeBlockEmptyLines,
       frontMatter,
       math,
+      preferLooseListItem,
     } = this.muya.options;
 
     this.state = new MarkdownToState({
@@ -69,6 +70,7 @@ class JSONState {
       trimUnnecessaryCodeBlockEmptyLines,
       frontMatter,
       math,
+      preferLooseListItem,
     }).generate(markdown);
   }
 

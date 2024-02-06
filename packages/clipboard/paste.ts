@@ -25,6 +25,7 @@ class Paste extends Base {
       math,
       trimUnnecessaryCodeBlockEmptyLines,
       frontMatter,
+      preferLooseListItem,
     } = muya.options;
     const selection = this.selection.getSelection();
     if (!selection) {
@@ -81,6 +82,7 @@ class Paste extends Base {
           isGitlabCompatibilityEnabled,
           trimUnnecessaryCodeBlockEmptyLines,
           frontMatter,
+          preferLooseListItem,
         }).generate(markdown);
 
         for (const state of states) {

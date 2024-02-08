@@ -1,20 +1,14 @@
-import editIcon from '@muya/assets/icons/imageEdit/2.png';
-import inlineIcon from '@muya/assets/icons/inline_image/2.png';
-import leftIcon from '@muya/assets/icons/align_left/2.png';
-import middleIcon from '@muya/assets/icons/align_center/2.png';
-import rightIcon from '@muya/assets/icons/align_right/2.png';
-import deleteIcon from '@muya/assets/icons/image_delete/2.png';
+import editIcon from '@muya/assets/icons/imageEdit/4.svg';
+import leftIcon from '@muya/assets/icons/align_left/4.svg';
+import middleIcon from '@muya/assets/icons/align_center/4.svg';
+import rightIcon from '@muya/assets/icons/align_right/4.svg';
+import deleteIcon from '@muya/assets/icons/delete/4.svg';
 
 const icons = [
   {
     type: 'edit',
     tooltip: 'Edit Image',
     icon: editIcon,
-  },
-  {
-    type: 'inline',
-    tooltip: 'Inline Image',
-    icon: inlineIcon,
   },
   {
     type: 'left',

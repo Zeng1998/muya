@@ -1,11 +1,10 @@
 .mu-float-wrapper.mu-image-toolbar-container {
   overflow: visible;
-
   border-radius: 2px;
 }
 
 .mu-image-toolbar {
-  width: 240px;
+  width: 180px;
   height: 30px;
 }
 
@@ -17,7 +16,7 @@
 
 .mu-image-toolbar ul {
   display: flex;
-  padding: 0 7px;
+  padding: 0;
 }
 
 .mu-image-toolbar li.item {
@@ -40,10 +39,6 @@
 .mu-image-toolbar li.item.edit {
   margin-right: 21px;
   margin-left: 10px;
-}
-
-.mu-image-toolbar li.item.inline {
-  margin-right: 8px;
 }
 
 .mu-image-toolbar li.item:first-of-type::before {

@@ -1,5 +1,5 @@
-import EditIcon from '@muya/assets/icons/edit.png';
-import DeleteIcon from '@muya/assets/icons/delete/2.png';
+import EditIcon from '@muya/assets/icons/edit.svg';
+import DeleteIcon from '@muya/assets/icons/delete/4.svg';
 
 export default [
   {

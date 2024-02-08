@@ -1,4 +1,4 @@
-import copyIcon from '@muya/assets/icons/copy/2.png';
+import copyIcon from '@muya/assets/icons/copy/4.svg';
 import Parent from '@muya/block/base/parent';
 import ScrollPage from '@muya/block/scrollPage';
 import I18n from '@muya/i18n';

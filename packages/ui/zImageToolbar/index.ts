@@ -32,13 +32,13 @@ class ImageToolbar extends BaseFloat {
   private toolbarContainer: HTMLDivElement = document.createElement('div');
 
   constructor(muya: Muya, options = {}) {
-    const name = 'mu-image-toolbar';
+    const name = 'z-image-toolbar';
     const opts = Object.assign({}, defaultOptions, options);
 
     super(muya, name, opts);
 
     this.container!.appendChild(this.toolbarContainer);
-    this.floatBox!.classList.add('mu-image-toolbar-container');
+    this.floatBox!.classList.add('z-image-toolbar-container');
 
     this.listen();
   }

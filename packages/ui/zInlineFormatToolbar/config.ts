@@ -1,12 +1,12 @@
 import { isOsx } from '@muya/config';
-import strongIcon from '@muya/assets/icons/format_strong/2.png';
-import emphasisIcon from '@muya/assets/icons/format_emphasis/2.png';
-import underlineIcon from '@muya/assets/icons/format_underline/2.png';
-import codeIcon from '@muya/assets/icons/code/2.png';
-import strikeIcon from '@muya/assets/icons/format_strike/2.png';
-import mathIcon from '@muya/assets/icons/format_math/2.png';
-import highlightIcon from '@muya/assets/icons/highlight/2.png';
-import clearIcon from '@muya/assets/icons/format_clear/2.png';
+import strongIcon from '@muya/assets/icons/format_strong/4.svg';
+import emphasisIcon from '@muya/assets/icons/format_emphasis/4.svg';
+import underlineIcon from '@muya/assets/icons/format_underline/4.svg';
+import codeIcon from '@muya/assets/icons/code/4.svg';
+import strikeIcon from '@muya/assets/icons/format_strike/4.svg';
+import mathIcon from '@muya/assets/icons/format_math/4.svg';
+import highlightIcon from '@muya/assets/icons/highlight/4.svg';
+import clearIcon from '@muya/assets/icons/format_clear/4.svg';
 
 const COMMAND_KEY = isOsx ? '⌘' : 'Ctrl';
 

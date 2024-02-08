@@ -115,7 +115,8 @@ class FormatPicker extends BaseFloat {
         {
           style: {
             background: `url(${i.icon}) no-repeat`,
-            'background-size': '100%',
+            'background-size': 'contain',
+            'background-position': 'center',
           },
         },
         ''

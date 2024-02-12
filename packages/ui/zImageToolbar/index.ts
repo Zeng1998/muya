@@ -54,7 +54,7 @@ class ImageToolbar extends BaseFloat {
       if (reference) {
         this.block = block;
         this.imageInfo = imageInfo;
-        this.image = this.reference?.querySelector('img');
+        this.image = (this.reference as HTMLElement)?.querySelector('img');
         if (!this.originalWidth) {
           this.originalWidth = this.image?.offsetWidth ?? null;
         }
@@ -122,11 +122,11 @@ class ImageToolbar extends BaseFloat {
           click:(event)=>{
             event.preventDefault();
             event.stopPropagation();
-            this.percentage=parseInt(i);
-            const width=this.originalWidth*parseFloat(i)/100;
+            this.percentage = parseInt(i);
+            const width = this.originalWidth! * parseFloat(i)/100;
             this.block!.updateImage(this.imageInfo!, 'width', String(width));
             const resizeList = document.querySelector('ul.resize-list');
-            resizeList.style.display =  'none';
+            (resizeList as HTMLElement)!.style.display =  'none';
             return this.hide();
           }
         }
@@ -185,7 +185,7 @@ class ImageToolbar extends BaseFloat {
       }
 
       case 'resize':
-        const resizeList = document.querySelector('ul.resize-list');
+        const resizeList = document.querySelector('ul.resize-list') as HTMLElement;
         if(resizeList.style.display === 'block'){
           resizeList.style.display = 'none';
         }else{

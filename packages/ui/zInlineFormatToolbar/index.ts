@@ -30,13 +30,13 @@ class FormatPicker extends BaseFloat {
   private formatContainer: HTMLDivElement = document.createElement('div');
 
   constructor(muya: Muya, options = {}) {
-    const name = 'mu-format-picker';
+    const name = 'z-format-picker';
     const opts = Object.assign({}, defaultOptions, options);
     super(muya, name, opts);
     this.options = opts;
     // BaseFloat Class has `container` and `floatBox` properties.
     this.container!.appendChild(this.formatContainer);
-    this.floatBox!.classList.add('mu-format-picker-container');
+    this.floatBox!.classList.add('z-format-picker-container');
     this.listen();
   }
 

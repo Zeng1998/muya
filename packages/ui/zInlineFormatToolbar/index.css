@@ -1,66 +1,48 @@
-.mu-float-wrapper.mu-format-picker-container {
+.mu-float-wrapper.z-format-picker-container {
   overflow: visible;
-
   border-radius: 2px;
 }
 
-.mu-format-picker {
-  width: 265px;
-  height: 28px;
+.z-format-picker {
+  width: 240px;
+  height: 30px;
 }
 
-.mu-format-picker ul,
-.mu-format-picker li {
+.z-format-picker ul,
+.z-format-picker li {
   margin: 0;
   padding: 0;
 }
 
-.mu-format-picker ul {
+.z-format-picker ul {
   display: flex;
-  padding: 0 7px;
+  padding: 0;
 }
 
-.mu-format-picker li.item {
+.z-format-picker li.item {
   position: relative;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 35px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
 
   list-style: none;
   cursor: pointer;
 }
 
-.mu-format-picker li.item:hover {
+.z-format-picker li.item:hover {
   background: var(--float-hover-color);
 }
 
-.mu-format-picker li.item:last-of-type {
-  margin-left: 6px;
-}
-
-.mu-format-picker li.item:last-of-type::before {
-  position: absolute;
-  top: 6px;
-  left: -3px;
-
-  width: 1px;
-  height: 18px;
-
-  background: var(--editor-color-10);
-
-  content: '';
-}
-
-.mu-format-picker li.item .icon-wrapper {
+.z-format-picker li.item .icon-wrapper {
   display: flex;
   width: 16px;
   height: 16px;
 }
 
-.mu-format-picker li.item .icon-wrapper i.icon {
+.z-format-picker li.item .icon-wrapper i.icon {
   position: relative;
 
   display: inline-block;
@@ -73,7 +55,7 @@
   transition: all .25s ease-in-out;
 }
 
-.mu-format-picker li.item .icon-wrapper i.icon > i[class^="icon-"] { 
+.z-format-picker li.item .icon-wrapper i.icon > i[class^="icon-"] { 
   position: relative;
   left: -16px;
 
@@ -84,6 +66,6 @@
   filter: drop-shadow(16px 0 currentcolor);
 }
 
-.mu-format-picker li.item.active .icon-wrapper i.icon {
+.z-format-picker li.item.active .icon-wrapper i.icon {
   color: var(--theme-color);
 }

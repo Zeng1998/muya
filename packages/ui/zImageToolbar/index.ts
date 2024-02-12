@@ -30,6 +30,9 @@ class ImageToolbar extends BaseFloat {
   private reference: ReferenceObject | null = null;
   private block: Format | null = null;
   private toolbarContainer: HTMLDivElement = document.createElement('div');
+  private originalWidth: number | null = null;
+  private percentage: number | null = null;
+  private image: HTMLImageElement | null = null;
 
   constructor(muya: Muya, options = {}) {
     const name = 'z-image-toolbar';
@@ -51,6 +54,10 @@ class ImageToolbar extends BaseFloat {
       if (reference) {
         this.block = block;
         this.imageInfo = imageInfo;
+        this.image = this.reference?.querySelector('img');
+        if (!this.originalWidth) {
+          this.originalWidth = this.image?.offsetWidth ?? null;
+        }
         setTimeout(() => {
           this.show(reference);
           this.render();
@@ -81,7 +88,7 @@ class ImageToolbar extends BaseFloat {
       const iconWrapper = h(iconWrapperSelector, icon);
       let itemSelector = `li.item.${i.type}`;
 
-      if (i.type === dataAlign || (!dataAlign && i.type === 'inline')) {
+      if (i.type === dataAlign || (i.type === 'resize' && this.percentage && this.percentage!==100)) {
         itemSelector += '.active';
       }
 
@@ -103,8 +110,30 @@ class ImageToolbar extends BaseFloat {
         iconWrapper
       );
     });
+    // resizelist
+    const resizeOptions=["25","33","50","67","80","100","150","200"];
+    const resizeList=h('ul.resize-list',{
+      style:{
+        display:'none'
+      }
+    },resizeOptions.map((i)=>{
+      return h('li.resize-list-item'+(parseInt(i)===this.percentage?' active':''),{
+        on:{
+          click:(event)=>{
+            event.preventDefault();
+            event.stopPropagation();
+            this.percentage=parseInt(i);
+            const width=this.originalWidth*parseFloat(i)/100;
+            this.block!.updateImage(this.imageInfo!, 'width', String(width));
+            const resizeList = document.querySelector('ul.resize-list');
+            resizeList.style.display =  'none';
+            return this.hide();
+          }
+        }
+      },`${i}%`);
+    }));
 
-    const vnode = h('ul', children);
+    const vnode=h('div',[h('ul',children), resizeList]);
 
     if (oldVNode) {
       patch(oldVNode, vnode);
@@ -155,6 +184,14 @@ class ImageToolbar extends BaseFloat {
         return this.hide();
       }
 
+      case 'resize':
+        const resizeList = document.querySelector('ul.resize-list');
+        if(resizeList.style.display === 'block'){
+          resizeList.style.display = 'none';
+        }else{
+          resizeList.style.display = 'block';
+        }
+        return;
       case 'inline':
       // fall through
       case 'left':

@@ -266,7 +266,7 @@ blockquote .mu-hide.mu-math>.mu-math-render {
 .mu-inline-image.center,
 .mu-inline-image.right {
   display: block;
-  margin: 30px auto 40px;
+  /* margin: 30px auto 40px; */
 }
 
 .mu-inline-image.left {

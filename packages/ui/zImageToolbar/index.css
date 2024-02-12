@@ -35,6 +35,9 @@
 .z-image-toolbar li.item:hover {
   background: var(--float-hover-color);
 }
+.z-image-toolbar li.item.active{
+  background: var(--float-hover-color);
+}
 
 .z-image-toolbar li.item .icon-wrapper {
   width: 16px;
@@ -67,4 +70,29 @@
 
 .z-image-toolbar li.item.active .icon-wrapper i.icon {
   color: var(--theme-color);
+}
+
+.z-image-toolbar ul.resize-list{
+  background:#fff;
+  display:none;
+  list-style:none;
+  margin-left:20px;
+  width:50px;
+}
+
+.z-image-toolbar li.resize-list-item{
+  padding:5px;
+  text-align:center;
+  background: #fff;
+}
+
+.z-image-toolbar li.resize-list-item.active{
+  padding:5px;
+  text-align:center;
+  background: var(--float-hover-color);
+}
+
+.z-image-toolbar li.resize-list-item:hover{
+  background: var(--float-hover-color)!important;
+  cursor: pointer;
 }

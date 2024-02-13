@@ -547,19 +547,19 @@ class Selection {
         height: imageWrapper.offsetHeight,
       };
 
-      // Show image edit tool bar.
-      eventCenter.emit('muya-image-toolbar', {
-        block: contentBlock,
-        reference,
-        imageInfo,
-      });
-
       // Handle show image transformer.
       const imageSelector = `#${imageInfo.imageId}`;
 
       const imageContainer = document.querySelector(
         `${imageSelector} .${CLASS_NAMES.MU_IMAGE_CONTAINER}`
       );
+
+      // Show image edit tool bar.
+      eventCenter.emit('muya-image-toolbar', {
+        block: contentBlock,
+        reference: imageContainer,
+        imageInfo,
+      });
 
       eventCenter.emit('muya-transformer', {
         block: contentBlock,

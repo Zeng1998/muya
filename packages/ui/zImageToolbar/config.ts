@@ -1,5 +1,5 @@
 import editIcon from '@muya/assets/icons/imageEdit/4.svg';
-import resizeIcon from '@muya/assets/icons/image_Resize/4.svg';
+import resizeIcon from '@muya/assets/icons/image_resize/4.svg';
 import leftIcon from '@muya/assets/icons/align_left/4.svg';
 import middleIcon from '@muya/assets/icons/align_center/4.svg';
 import rightIcon from '@muya/assets/icons/align_right/4.svg';
